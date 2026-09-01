@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Privacy Policy — DysLexic</title>
+<meta name="description" content="Privacy Policy for the DysLexic reading-support app: what the app handles, what stays on your device, the on-device text recognition notice, the Pro subscription data handled by RevenueCat, and your rights.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --page:#ffffff;
+    --tint:#f6f8f9;
+    --tint-2:#eef2f3;
+    --ink:#16232b;
+    --ink-2:#3b4b55;
+    --muted:#64747e;
+    --line:#e3e8ea;
+    --line-strong:#cdd8db;
+    --accent:#0b5a60;
+    --accent-ink:#084a4f;
+    --accent-tint:#eef6f6;
+    --accent-line:#c9e2e3;
+    --amber:#7a5510;
+    --amber-tint:#fdf7ea;
+    --amber-line:#eddfbc;
+    --radius:12px;
+    --font:"Atkinson Hyperlegible","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,"JetBrains Mono",Consolas,monospace;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--ink);
+    font-family:var(--font);
+    font-size:17.5px;
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration:none}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+  p,li{overflow-wrap:break-word}
+  strong{font-weight:700}
+
+  code{
+    font-family:var(--mono);font-size:.86em;
+    background:var(--tint-2);border:1px solid var(--line);
+    border-radius:4px;padding:1px 6px;
+  }
+
+  /* ---------- document switcher ---------- */
+  .docnav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:saturate(160%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .docnav-inner{
+    max-width:860px;margin:0 auto;padding:11px 22px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .brand{font-weight:700;letter-spacing:-.01em;font-size:1rem;color:var(--ink)}
+  .brand span{
+    font-weight:400;color:var(--muted);font-size:.82rem;
+    margin-left:8px;padding-left:9px;border-left:1px solid var(--line-strong);
+  }
+  .docnav nav{display:flex;gap:6px;flex-wrap:wrap}
+  .docnav nav a{
+    font-size:.85rem;text-decoration:none;color:var(--muted);
+    padding:5px 11px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+  }
+  .docnav nav a:hover{color:var(--accent-ink);background:var(--tint)}
+  .docnav nav a.is-current{
+    color:var(--accent-ink);background:var(--accent-tint);
+    border-color:var(--accent-line);font-weight:700;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{border-bottom:1px solid var(--line);background:var(--page)}
+  .masthead .inner{max-width:860px;margin:0 auto;padding:52px 22px 40px}
+  .eyebrow{
+    display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);
+    background:var(--accent-tint);border:1px solid var(--accent-line);
+    padding:4px 11px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{margin:0 0 14px;font-size:2.25rem;line-height:1.2;letter-spacing:-.02em}
+  .lead{margin:0;font-size:1.08rem;color:var(--ink-2);max-width:62ch}
+  .meta{
+    margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:.88rem;color:var(--muted);
+    display:flex;gap:8px 20px;flex-wrap:wrap;
+  }
+  .meta span{display:inline-flex;gap:6px}
+  .meta b{font-weight:700;color:var(--ink-2)}
+
+  /* ---------- body ---------- */
+  .doc{max-width:860px;margin:0 auto;padding:0 22px 100px}
+
+  section{scroll-margin-top:78px;padding-top:14px;margin-top:44px;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none}
+
+  h2{
+    margin:0 0 14px;font-size:1.34rem;line-height:1.32;letter-spacing:-.01em;
+    display:flex;align-items:baseline;gap:13px;
+  }
+  h2 .n{
+    flex:none;min-width:1.9em;font-size:.82rem;font-weight:700;
+    color:var(--accent);letter-spacing:.02em;transform:translateY(-1px);
+  }
+  h3{margin:30px 0 8px;font-size:1.03rem;color:var(--accent-ink);line-height:1.4}
+  h3 .n{font-weight:700;color:var(--muted);margin-right:7px;font-size:.92rem}
+
+  p{margin:0 0 14px}
+  ul,ol{padding-left:24px;margin:0 0 16px}
+  li{margin-bottom:8px}
+  li::marker{color:var(--accent)}
+
+  /* ---------- blocks ---------- */
+  .owner{
+    background:var(--page);border:1px solid var(--line-strong);
+    border-radius:var(--radius);padding:18px 22px;margin:18px 0 8px;
+  }
+  .owner .name{font-weight:700;font-size:1.05rem;display:block;margin-bottom:4px}
+  .owner p{margin:2px 0;font-size:.96rem;color:var(--ink-2)}
+
+  .key{
+    background:var(--accent-tint);border:1px solid var(--accent-line);
+    border-left:4px solid var(--accent);
+    border-radius:var(--radius);padding:17px 20px;margin:22px 0;
+  }
+  .key p{margin:0}
+  .key p+p{margin-top:11px}
+  .key .label{
+    display:block;font-size:.72rem;font-weight:700;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:7px;
+  }
+
+  .warn{
+    background:var(--amber-tint);border:1px solid var(--amber-line);
+    border-left:4px solid #c99a3a;
+    border-radius:var(--radius);padding:17px 20px;margin:22px 0;
+    color:var(--amber);font-size:.98rem;
+  }
+  .warn p{margin:0}
+  .warn p+p{margin-top:11px}
+  .warn strong{color:inherit}
+
+  /* ---------- summary ---------- */
+  .summary{
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;margin:36px 0 8px;background:var(--tint);
+  }
+  .summary h2{
+    font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px;display:block;
+  }
+  .summary ul{list-style:none;padding:0;margin:0 0 14px}
+  .summary li{display:flex;gap:11px;margin-bottom:11px;font-size:.97rem;color:var(--ink-2)}
+  .summary li::before{
+    content:"";flex:none;width:7px;height:7px;border-radius:50%;
+    background:var(--accent);margin-top:.55em;
+  }
+  .summary .disclaimer{
+    margin:0;padding-top:13px;border-top:1px solid var(--line-strong);
+    font-size:.86rem;color:var(--muted);
+  }
+
+  /* ---------- table of contents ---------- */
+  .toc{border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin:26px 0 8px}
+  .toc h2{
+    font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px;display:block;
+  }
+  .toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:34px}
+  .toc li{margin:0 0 8px;break-inside:avoid;font-size:.95rem;display:flex;gap:10px;align-items:baseline}
+  .toc li .n{
+    flex:none;min-width:1.6em;text-align:right;
+    color:var(--muted);font-size:.82rem;font-variant-numeric:tabular-nums;
+  }
+  .toc a{text-decoration:none;color:var(--ink-2)}
+  .toc a:hover{color:var(--accent-ink);text-decoration:underline}
+
+  /* ---------- tables ---------- */
+  .t-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:var(--radius)}
+  table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93rem}
+  caption{
+    caption-side:top;text-align:left;font-weight:700;font-size:.95rem;
+    padding:0 0 10px;color:var(--ink);
+  }
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{
+    background:var(--tint);font-weight:700;color:var(--ink);
+    font-size:.85rem;letter-spacing:.01em;
+    border-bottom:1px solid var(--line-strong);
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:nth-child(even) td{background:#fbfcfc}
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:64px;padding-top:26px;border-top:1px solid var(--line);
+    font-size:.9rem;color:var(--muted);
+  }
+  .foot p{margin:0 0 8px}
+  .foot .sep{margin:0 8px;color:var(--line-strong)}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:720px){
+    body{font-size:16.5px}
+    .masthead .inner{padding:34px 20px 30px}
+    h1{font-size:1.72rem}
+    h2{font-size:1.18rem;gap:10px}
+    .toc ol{columns:1}
+    .doc{padding:0 20px 76px}
+  }
+
+  /* ---------- print ---------- */
+  @media print{
+    .docnav,.toc{display:none}
+    body{font-size:10.5pt;line-height:1.5;color:#000}
+    .masthead{border:none}
+    .masthead .inner,.doc{padding:0;max-width:none}
+    section{break-inside:auto;border-top:1px solid #bbb}
+    h2,h3{break-after:avoid}
+    .key,.warn,.owner,.summary,.t-wrap{background:none;border:1px solid #999;break-inside:avoid}
+    table{min-width:0}
+    th{background:none}
+    tbody tr:nth-child(even) td{background:none}
+    a{color:#000;text-decoration:none}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt;color:#444}
+  }
+</style>
+</head>
+<body>
+
+<div class="docnav">
+  <div class="docnav-inner">
+    <div class="brand">DysLexic<span>Legal documents</span></div>
+    <nav aria-label="Legal documents">
+      <a href="./terms-and-conditions.html">Terms &amp; Conditions</a>
+      <a href="./privacy-policy.html" class="is-current" aria-current="page">Privacy Policy</a>
+    </nav>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="inner">
+    <div class="eyebrow">Privacy notice</div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">What DysLexic does with information, which parts of it never leave your device, which parts do — and what you can ask for.</p>
+    <div class="meta">
+      <span><b>Last updated:</b> 1 September 2026</span>
+      <span><b>Version:</b> 2.0</span>
+      <span><b>Application:</b> DysLexic (com.kimboj.dyslexic)</span>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+
+  <p class="lead">DysLexic helps people with dyslexia read. It was built around one commitment: <strong>the material you bring to it — your texts, your photographs, your documents — is processed by your own device and goes nowhere else.</strong> There is no account to create and no email address to hand over.</p>
+
+  <p>One part of the app does have to reach the outside world, and that is the part that manages the Pro subscription. This notice keeps the two apart on purpose, because the difference is fundamental: what you read with DysLexic stays yours and stays on the phone, while what concerns your purchase is handled by outside providers, each of them named openly below.</p>
+
+  <div class="summary">
+    <h2>In short</h2>
+    <ul>
+      <li>Your texts, photos and documents are read and processed on the device. The Owner never receives them, never stores them, and is not technically able to see them.</li>
+      <li>Text recognition runs <strong>on the device</strong>: the picture of your page is not uploaded to Google or to anyone else.</li>
+      <li>The only data that leaves the device is what the Pro subscription needs: a random identifier, the state of your purchase and some technical details, handled by the provider RevenueCat.</li>
+      <li>There is no advertising, no profiling, no analytics of your behaviour and no sale of data to anybody.</li>
+    </ul>
+    <p class="disclaimer">This box is a plain-language summary, offered for convenience. The sections that follow are the notice itself.</p>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><span class="n">1</span><a href="#controller">Who is responsible for your data</a></li>
+      <li><span class="n">2</span><a href="#design">How the app is built, and why it matters</a></li>
+      <li><span class="n">3</span><a href="#data">Everything the app handles</a></li>
+      <li><span class="n">4</span><a href="#permissions">Device permissions</a></li>
+      <li><span class="n">5</span><a href="#mlkit">Text recognition: Google ML Kit</a></li>
+      <li><span class="n">6</span><a href="#speech">Reading aloud: the system speech engine</a></li>
+      <li><span class="n">7</span><a href="#print">Printing, exporting and the clipboard</a></li>
+      <li><span class="n">8</span><a href="#subscription">The Pro subscription and RevenueCat</a></li>
+      <li><span class="n">9</span><a href="#noads">No advertising and no profiling</a></li>
+      <li><span class="n">10</span><a href="#minors">Children and young people</a></li>
+      <li><span class="n">11</span><a href="#bases">The legal bases we rely on</a></li>
+      <li><span class="n">12</span><a href="#retention">How long data is kept, and how to erase it</a></li>
+      <li><span class="n">13</span><a href="#transfers">Transfers outside the European Economic Area</a></li>
+      <li><span class="n">14</span><a href="#recipients">Who receives data</a></li>
+      <li><span class="n">15</span><a href="#security">Security</a></li>
+      <li><span class="n">16</span><a href="#rights">Your rights, and how to use them</a></li>
+      <li><span class="n">17</span><a href="#updates">Updates to this notice</a></li>
+      <li><span class="n">18</span><a href="#contact">How to reach us</a></li>
+    </ol>
+  </nav>
+
+  <section id="controller">
+    <h2><span class="n">1</span>Who is responsible for your data</h2>
+    <p>The controller — the person who decides why and how personal data is processed — is:</p>
+    <div class="owner">
+      <span class="name">Meraviglia Greta</span>
+      <p>Email: <a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a></p>
+      <p>Application: DysLexic, identifier <code>com.kimboj.dyslexic</code> (Android and iOS)</p>
+    </div>
+    <p>That email address is the single official channel for any question about this notice and for exercising any of the rights described in section 16.</p>
+    <p>No Data Protection Officer has been appointed, because none of the conditions in Article 37 of the GDPR that would make an appointment mandatory apply here.</p>
+  </section>
+
+  <section id="design">
+    <h2><span class="n">2</span>How the app is built, and why it matters</h2>
+    <p>Most of this notice follows from one architectural fact, so it is worth setting out first.</p>
+    <p>The heart of the app runs entirely on your device. Photograph a page and the image is examined by your phone's own processor. Import a PDF and the file is opened and read on the phone. Change a typeface or a colour and the preference is written into the app's own storage. At no point in any of this does the content travel to a server belonging to the Owner — for the straightforward reason that <strong>no such server exists</strong>. The Owner operates no infrastructure capable of receiving your texts.</p>
+    <p>Around that core there are three points of contact with the outside world, each described in full further on:</p>
+    <ul>
+      <li><strong>text recognition</strong>, which uses a Google library that works on the device itself (section <a href="#mlkit">5</a>);</li>
+      <li><strong>reading aloud</strong>, which uses the speech engine belonging to your operating system (section <a href="#speech">6</a>);</li>
+      <li><strong>the Pro subscription</strong>, which is handled by RevenueCat together with the app stores (section <a href="#subscription">8</a>).</li>
+    </ul>
+    <p>Only the third involves sending data to a provider working on the Owner's behalf. The other two concern components of the platform itself, and neither of them transmits your content.</p>
+  </section>
+
+  <section id="data">
+    <h2><span class="n">3</span>Everything the app handles</h2>
+    <p>The two tables below account for everything DysLexic creates, reads, keeps or transmits. The “Where it ends up” column says where each item genuinely goes.</p>
+
+    <h3><span class="n">3.1</span>What stays on your device</h3>
+    <div class="t-wrap">
+      <table>
+        <caption>Data created or read locally, which never reaches the Owner or any third party</caption>
+        <thead>
+          <tr><th>Item</th><th>Where it comes from</th><th>Where it ends up</th><th>How long it lasts</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The frame you capture with the camera</td>
+            <td>The camera, when you press the button</td>
+            <td>Temporary memory on the device</td>
+            <td>Discarded once recognition finishes; never added to your photo gallery</td>
+          </tr>
+          <tr>
+            <td>An image you pick yourself</td>
+            <td>Your photo gallery, at your choice</td>
+            <td>Read only; no copy is made</td>
+            <td>Only for as long as recognition takes</td>
+          </tr>
+          <tr>
+            <td>A document you import (.txt, .pdf, .docx, .odt, .rtf)</td>
+            <td>The system file picker, at your choice</td>
+            <td>Opened and converted into text on the device</td>
+            <td>Only for as long as extraction takes; the original file is never modified</td>
+          </tr>
+          <tr>
+            <td>The text that was recognised or imported</td>
+            <td>Processing on the device</td>
+            <td>The reading screen</td>
+            <td>Until you replace it or close the app</td>
+          </tr>
+          <tr>
+            <td>Texts you save</td>
+            <td>You, saving them deliberately</td>
+            <td>The app's own local storage</td>
+            <td>Until you delete them</td>
+          </tr>
+          <tr>
+            <td>Reading preferences (typeface, size, line spacing, colours, background, language, speech rate)</td>
+            <td>The app's settings</td>
+            <td>The app's own local storage</td>
+            <td>Until you change them or uninstall the app</td>
+          </tr>
+          <tr>
+            <td>A count of how many recognitions you have run</td>
+            <td>Using the app</td>
+            <td>The app's own local storage</td>
+            <td>Until you uninstall the app</td>
+          </tr>
+          <tr>
+            <td>A record that you saw this notice, with the date and time</td>
+            <td>Your acceptance when the app first starts</td>
+            <td>The app's own local storage</td>
+            <td>Until you uninstall the app</td>
+          </tr>
+          <tr>
+            <td>A PDF built for printing or exporting</td>
+            <td>The print or export command, on your request</td>
+            <td>The app's private area on the device</td>
+            <td>Temporary; handed to the printing or sharing system you choose (see section 7)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Nothing in this first table is transmitted to the Owner or to anyone else. The recognition count in particular is a plain number, used to decide when to show an informational screen. It is not tied to you and it never leaves the device.</p>
+
+    <h3><span class="n">3.2</span>What is handled for the Pro subscription</h3>
+    <div class="t-wrap">
+      <table>
+        <caption>Data processed only if you take out a subscription</caption>
+        <thead>
+          <tr><th>Item</th><th>Where it comes from</th><th>Where it ends up</th><th>What it is for</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Subscriber identifier (App User ID)</td>
+            <td>Generated automatically by the SDK as an anonymous random code, unconnected to your identity</td>
+            <td>RevenueCat servers</td>
+            <td>Linking the subscription to the device and allowing it to be restored</td>
+          </tr>
+          <tr>
+            <td>State and history of the purchase (purchase, renewal, expiry, cancellation, refund, billing problem)</td>
+            <td>Google Play or the App Store, by way of RevenueCat</td>
+            <td>RevenueCat servers</td>
+            <td>Checking that the subscription is live and unlocking the Pro features</td>
+          </tr>
+          <tr>
+            <td>Proof of purchase — the Apple receipt file or the Google purchase token</td>
+            <td>The store, at the moment of purchase</td>
+            <td>RevenueCat servers, for validation against the store</td>
+            <td>Confirming the purchase is genuine and preventing abuse</td>
+          </tr>
+          <tr>
+            <td>Technical details of device and app (device type, operating system and version, app and SDK version, language, time zone, country)</td>
+            <td>Collected by the RevenueCat SDK</td>
+            <td>RevenueCat servers</td>
+            <td>Making the service work, applying the correct price for the country, diagnosing faults</td>
+          </tr>
+          <tr>
+            <td>IP address</td>
+            <td>The app's network connection</td>
+            <td>RevenueCat servers</td>
+            <td>Establishing the country of purchase and preventing fraud. It is not used to profile you</td>
+          </tr>
+          <tr>
+            <td>Dates attached to the subscription (last use of the app, purchase and renewal events)</td>
+            <td>The life cycle of the subscription</td>
+            <td>RevenueCat servers</td>
+            <td>Administering the contract and producing aggregate sales figures</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="key">
+      <p><strong>Your card details never pass through DysLexic, and never through RevenueCat either.</strong> Payment happens entirely inside Google Play or the App Store, which remain the only parties that handle it. All the app ever receives back is the confirmation that the purchase succeeded.</p>
+    </div>
+
+    <h3><span class="n">3.3</span>What the app never handles</h3>
+    <p>DysLexic does not process, in any form: your first name or surname, your email address, your telephone number, your date of birth, your postal address, your precise location, your contacts, advertising identifiers, browsing history, biometric data, health data, or any other special category of data within the meaning of Article 9 of the GDPR.</p>
+    <p>Two configuration choices are worth stating because they are what make the list above true rather than aspirational: no customer attributes such as a name or an email address are set on the subscription profile, and no advertising or attribution integration is enabled. It follows that <strong>the Owner has no way of working back from your real-world identity to your subscriber identifier</strong>, which is a randomly generated code.</p>
+  </section>
+
+  <section id="permissions">
+    <h2><span class="n">4</span>Device permissions</h2>
+    <p>Several features cannot work unless the app is allowed to reach a specific part of your device. Each permission you grant is an act of authorisation on your part: it opens a door onto material already held on your device. This section says which doors exist and how far each one opens; the sections that follow explain what is then done behind them.</p>
+    <p>Nothing is requested up front. Each permission is asked for at the moment its feature is first used, and every one of them can be withdrawn later from your operating system's settings.</p>
+
+    <h3>Camera — used without recording and without saving</h3>
+    <p>The camera lets you frame printed text and capture a single still to be turned into text. The preview stays on screen, the captured frame is analysed and then discarded: <strong>nothing is written to your photo gallery and no video is produced</strong>.</p>
+    <p><strong>DysLexic does not record audio and does not touch the microphone.</strong> The audio-recording permission is explicitly disabled in the app's configuration — <code>RECORD_AUDIO</code> is listed among the blocked permissions — so the operating system will not grant it even if something were to ask.</p>
+
+    <h3>Photos and images — one file at a time</h3>
+    <p>This is only needed if you choose to run recognition on a picture already saved on your device. The app receives the single image you select, not access to your gallery as a whole, and it does not copy that image anywhere.</p>
+
+    <h3>Documents and device storage</h3>
+    <p>Importing a document goes through the system file picker: you choose the file, and the app receives that file and nothing else. <strong>DysLexic does not request a general storage permission</strong> — writing to external storage is expressly blocked in the app's configuration, where <code>WRITE_EXTERNAL_STORAGE</code> is listed among the blocked permissions. The app therefore cannot browse, alter or delete other files on your device. Anything the app produces for printing or exporting is written into its own private area.</p>
+
+    <h3>Network access</h3>
+    <p>The internet connection is used solely for managing the subscription and for the technical exchanges described in section <a href="#mlkit">5</a>. Reading, recognition and importing all work without a connection.</p>
+
+    <h3>If you refuse a permission</h3>
+    <p>The app carries on working. The only thing you lose is the feature tied to that permission: without the camera you can still paste text, import documents and use every reading feature. Permissions can be revoked at any time from your operating system's settings.</p>
+  </section>
+
+  <section id="mlkit">
+    <h2><span class="n">5</span>Text recognition: Google ML Kit</h2>
+    <p>Converting an image into editable text — optical character recognition, or OCR — is carried out by <strong>Google ML Kit Text Recognition</strong>, a library supplied by Google LLC and built into the app.</p>
+
+    <div class="key">
+      <span class="label">The key point</span>
+      <p><strong>Your image is not uploaded anywhere.</strong> ML Kit works in on-device mode: the recognition model runs on your own hardware. In Google's own words, processing of the input data happens fully on-device and “ML Kit does not send that data and the resultant outputs to Google servers”. Neither the photograph of your page nor the text read from it reaches Google. This is exactly why the library was chosen.</p>
+    </div>
+
+    <p>ML Kit is nonetheless a proprietary Google component, and two things about it should be stated plainly:</p>
+    <ul>
+      <li><strong>Google receives measurement data about the library itself.</strong> Google's ML Kit terms state that the APIs “send metrics about the performance and utilization of the APIs in your app to Google”, which Google uses for measurement, debugging, maintenance, improvement and the detection of misuse. This is telemetry about how the component behaves — <em>not</em> the content of your images or of the recognised text.</li>
+      <li><strong>The library contacts Google from time to time.</strong> Google states that the ML Kit APIs “may contact Google servers from time to time in order to receive things like bug fixes, updated models and hardware accelerator compatibility information”. On Android these exchanges, including the download and updating of the recognition models, are handled by the operating system and by Google Play services rather than by the app, and they are governed by Google's own privacy policy.</li>
+    </ul>
+
+    <p>For this specific processing the relevant controller is Google, acting independently of the Owner:</p>
+    <div class="owner">
+      <span class="name">Google LLC</span>
+      <p>1600 Amphitheatre Parkway, Mountain View, CA 94043, United States</p>
+      <p>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></p>
+      <p>ML Kit terms of service: <a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer">developers.google.com/ml-kit/terms</a></p>
+    </div>
+    <p>The Owner has no sight of that data, does not receive it, and cannot switch it off separately: it is part of how the library operates.</p>
+    <p>If you would rather this processing did not take place, it is enough not to use recognition from the camera or from an image. Everything else in the app remains fully usable.</p>
+  </section>
+
+  <section id="speech">
+    <h2><span class="n">6</span>Reading aloud: the system speech engine</h2>
+    <p>The feature that reads text aloud does not rely on any service belonging to the Owner. It uses the <strong>speech engine installed on your device</strong> — the same one used by your other apps and by the accessibility features of the platform.</p>
+    <p>That has a consequence worth knowing about. <strong>The text you ask to have read is passed to the system speech engine, and what happens to it next depends on which engine you have set.</strong> Some engines synthesise speech entirely offline; others, depending on the voice selected and on your device settings, may process the text on their own provider's servers. On Android the default engine is typically Google Speech Services; on iOS it is Apple's speech engine.</p>
+    <p>DysLexic does not choose the engine for you, cannot change how it behaves, and receives nothing back from it. If you want certainty that the text never leaves the device, you can select a voice downloaded for offline use in your system settings, or simply not use the read-aloud feature.</p>
+    <div class="warn" role="note">
+      <p>Any processing carried out by the provider of the speech engine is done under that provider's own responsibility and under its own privacy policy, not that of the Owner of DysLexic.</p>
+    </div>
+  </section>
+
+  <section id="print">
+    <h2><span class="n">7</span>Printing, exporting and the clipboard</h2>
+    <p><strong>Printing.</strong> When you print, the app lays out a formatted page and hands it to your operating system's printing service. From that moment the job belongs to the system and to the printer you pick: if you use a cloud printing service, that service's own terms apply.</p>
+    <p><strong>Exporting and sharing.</strong> The app can turn your formatted text into a PDF and pass it either to the system sharing sheet or to a folder you choose. Once you select a destination — an email client, a messaging app, a cloud drive, a local folder — the file is in the hands of whatever you selected, under its rules and not the app's. DysLexic never sends that file anywhere on its own initiative.</p>
+    <p><strong>Clipboard.</strong> Copying and pasting happen only when you explicitly ask for them. Bear in mind that the system clipboard is a shared resource: other installed apps may, within the limits their operating system sets, read what is on it. That is a characteristic of the platform, not of DysLexic.</p>
+  </section>
+
+  <section id="subscription">
+    <h2><span class="n">8</span>The Pro subscription and RevenueCat</h2>
+    <p>DysLexic offers a Pro subscription that unlocks additional features. To administer it, the app uses <strong>RevenueCat, Inc.</strong>, a company based in the United States that provides subscription-management infrastructure.</p>
+
+    <h3>What role RevenueCat plays</h3>
+    <p>RevenueCat acts as a <strong>processor</strong> within the meaning of Article 28 of the GDPR. Its own data processing addendum records the arrangement explicitly: the customer — here, the Owner — is the controller, and RevenueCat is the processor. It handles data solely on the Owner's behalf and on the Owner's documented instructions, and may not use it for purposes of its own. Decisions about what data is processed, and why, remain the Owner's alone.</p>
+
+    <h3>What it actually does</h3>
+    <p>When you start or restore a subscription, the app asks RevenueCat whether you are entitled to the Pro features. To answer, RevenueCat receives and stores the items listed in <a href="#data">table 3.2</a>: a random identifier standing in for your subscriber profile, the state and history of your purchases, the proof of purchase issued by the store, some technical details about the device, and the IP address of the connection. RevenueCat verifies receipts with Google Play or the App Store and returns a single plain answer to the app: subscription active, or not.</p>
+    <p>The service also lets the Owner look at how subscriptions are performing in aggregate — activations, renewals and cancellations. Those figures cannot be traced back to individual people.</p>
+    <p>RevenueCat stores this data in Amazon Web Services data centres located in the United States, and traffic to it is encrypted in transit.</p>
+
+    <h3>What does not happen</h3>
+    <ul>
+      <li><strong>Payment details pass through neither DysLexic nor RevenueCat.</strong> Card, account and billing information are handled exclusively by Google Play or the App Store.</li>
+      <li>RevenueCat <strong>never receives your texts, your photographs or your documents</strong>. That content never leaves the device in the first place.</li>
+      <li>Subscription data is <strong>not used for advertising, for profiling or for sale to third parties</strong>.</li>
+      <li>The subscriber identifier is a <strong>randomly generated code</strong>. It contains no name, no email address and nothing else that identifies you directly.</li>
+    </ul>
+
+    <h3>What the stores do</h3>
+    <p>Google LLC (Google Play) and Apple Inc. (App Store) handle the purchase as <strong>independent controllers</strong>: payment, invoicing, renewals and refunds are theirs, governed by their own privacy notices, over which the Owner of DysLexic has no control whatsoever. Managing or cancelling a subscription is done in your store account settings.</p>
+
+    <h3>Further reading</h3>
+    <ul>
+      <li><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">RevenueCat privacy policy</a> and <a href="https://www.revenuecat.com/dpa/" target="_blank" rel="noopener noreferrer">data processing addendum</a></li>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google privacy policy</a></li>
+      <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple privacy policy</a></li>
+    </ul>
+
+    <p>If you never take out a subscription, none of the processing described in this section takes place at all: the app remains fully usable in its core features.</p>
+  </section>
+
+  <section id="noads">
+    <h2><span class="n">9</span>No advertising and no profiling</h2>
+    <p>DysLexic contains no advertising network and no tool for analysing user behaviour. Concretely, the app contains none of the following:</p>
+    <ul>
+      <li>banners, interstitials or promotional videos of any kind;</li>
+      <li>behavioural analytics, or any measurement of your reading sessions;</li>
+      <li>advertising identifiers, cookies or equivalent tracking technologies;</li>
+      <li>profiling, or automated decision-making producing legal effects concerning you or similarly significantly affecting you within the meaning of Article 22 of the GDPR.</li>
+    </ul>
+    <p>The subscription data described in section <a href="#subscription">8</a> exists solely to make the subscription work, and is not put to any marketing use. Since no data is gathered for advertising purposes, no consent is requested for it.</p>
+  </section>
+
+  <section id="minors">
+    <h2><span class="n">10</span>Children and young people</h2>
+    <p>DysLexic is a reading aid and is likely to be used by students, and therefore by people who are under 18.</p>
+    <p>The app may be used from the age of <strong>14</strong>, which is the age of digital consent set in Italy by Article 2-<em>quinquies</em> of the Personal Data Protection Code (Legislative Decree 196/2003, as amended by Legislative Decree 101/2018). <strong>Anyone under 14 may use it only under the supervision and with the consent of a parent or of the person holding parental responsibility</strong>, who is responsible for authorising use of the service, for any subscription taken out, and for the resulting processing of the child's personal data as described in this notice. The same age limit is stated in the <a href="./terms-and-conditions.html">Terms and Conditions</a>.</p>
+    <p>In practice the app asks for no registration, does not ask your age and collects no direct identifiers: what you read is transmitted to nobody, and the subscription data amounts to a random code with no personal details attached to it. Buying a subscription, moreover, goes through your store account, and the store applies its own controls over purchases made by minors, parental controls included.</p>
+    <p>Parents and teachers who want the tightest control should check, in the device settings, which speech engine is active (see section <a href="#speech">6</a>) and choose an offline voice.</p>
+  </section>
+
+  <section id="bases">
+    <h2><span class="n">11</span>The legal bases we rely on</h2>
+    <p>The processing described in this notice rests on the following legal bases, drawn from Article 6 of the GDPR:</p>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Processing</th><th>Legal basis</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Access to the camera, to images and to documents</td>
+            <td>Consent — Article 6(1)(a). You give it by granting the permission, and you can withdraw it from your system settings at any time.</td>
+          </tr>
+          <tr>
+            <td>Text recognition, reading aloud, importing, printing</td>
+            <td>Performance of the service you asked for — Article 6(1)(b)</td>
+          </tr>
+          <tr>
+            <td>Saving preferences and texts locally</td>
+            <td>Performance of the service you asked for — Article 6(1)(b)</td>
+          </tr>
+          <tr>
+            <td>Administering the Pro subscription and verifying purchases through RevenueCat</td>
+            <td>Performance of the subscription contract to which you are a party — Article 6(1)(b)</td>
+          </tr>
+          <tr>
+            <td>Validating receipts and preventing fraud and abuse</td>
+            <td>The Owner's legitimate interest in preventing fraudulent use of the service — Article 6(1)(f)</td>
+          </tr>
+          <tr>
+            <td>Retaining accounting records relating to purchases</td>
+            <td>Compliance with a legal obligation, in particular tax and accounting obligations — Article 6(1)(c)</td>
+          </tr>
+          <tr>
+            <td>Recording that this notice was seen</td>
+            <td>Compliance with a legal obligation — Article 6(1)(c)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="retention">
+    <h2><span class="n">12</span>How long data is kept, and how to erase it</h2>
+
+    <h3>On the device</h3>
+    <p>Here you set the duration yourself:</p>
+    <ul>
+      <li><strong>Images and documents</strong> are not retained at all: they are processed and discarded.</li>
+      <li><strong>Saved texts and preferences</strong> remain until you delete them from within the app.</li>
+      <li><strong>Uninstalling DysLexic</strong> removes everything the app created locally.</li>
+    </ul>
+    <p>The Owner keeps no copy of this material and makes no backup of it, because it is never received in the first place.</p>
+
+    <h3>Subscription data</h3>
+    <p>The items in table 3.2 are held by RevenueCat for the duration of the subscription relationship and for the period afterwards needed to deal with renewals, purchase restorations, disputes and refunds. RevenueCat's published policy states that it keeps customer data for as long as the account exists and for six years after that, in order to identify issues and resolve any legal proceedings. Data that constitutes accounting and tax records is kept for the period the applicable legislation requires, which in Italy is normally ten years.</p>
+    <p>You may ask at any time for your subscriber profile to be deleted by writing to the Owner, who will pass the request on to RevenueCat, save for data that must be retained by law. Please note that deleting the profile may cost you the ability to restore a subscription you have already paid for.</p>
+    <div class="warn" role="note">
+      <p><strong>Deleting your data at RevenueCat does not cancel your subscription.</strong> The subscription lives with Google Play or the App Store and has to be cancelled separately, from the settings of your store account.</p>
+    </div>
+
+    <div class="warn" role="note">
+      <p>One factor sits outside the app entirely: if automatic system backup is switched on for your device (Google One, iCloud or similar), the app's local data may be included in those backups according to your device settings and the backup provider's terms. That is behaviour of the operating system, and it is managed from its settings.</p>
+    </div>
+  </section>
+
+  <section id="transfers">
+    <h2><span class="n">13</span>Transfers outside the European Economic Area</h2>
+    <p>Some of the providers named in this notice are based in the United States, so data concerning them may be processed outside the European Economic Area:</p>
+    <ul>
+      <li><strong>RevenueCat, Inc.</strong> (United States), for subscription management. Its infrastructure runs in Amazon Web Services data centres in the United States.</li>
+      <li><strong>Google LLC</strong> (United States), for the technical components described in section 5 and for purchases made through Google Play.</li>
+      <li><strong>Apple Inc.</strong> (United States), for purchases made through the App Store and for speech synthesis on iOS.</li>
+    </ul>
+    <p>These transfers take place under the safeguards provided for in Chapter V of the GDPR. RevenueCat's data processing addendum relies on the <strong>standard contractual clauses</strong> approved by the European Commission, together with the United Kingdom's International Data Transfer Addendum and a Swiss addendum where those apply. Google and Apple rely on the safeguards published in their own privacy notices, which include the standard contractual clauses and, for providers that hold a certification, the <strong>EU–U.S. Data Privacy Framework</strong>; Google LLC is a certified participant in that framework.</p>
+    <p>You can ask the Owner for information about the safeguards in place by writing to the address in section 18.</p>
+    <p>Your texts, your images and your documents form no part of any transfer, because they do not leave the device.</p>
+  </section>
+
+  <section id="recipients">
+    <h2><span class="n">14</span>Who receives data</h2>
+    <p>To summarise, the only parties that may come into contact with data concerning you are these:</p>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Party</th><th>Role</th><th>Data involved</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RevenueCat, Inc.</td>
+            <td>Processor</td>
+            <td>Subscription data (table 3.2)</td>
+          </tr>
+          <tr>
+            <td>Google LLC — Google Play</td>
+            <td>Independent controller</td>
+            <td>Payment, invoicing, subscription administration</td>
+          </tr>
+          <tr>
+            <td>Apple Inc. — App Store</td>
+            <td>Independent controller</td>
+            <td>Payment, invoicing, subscription administration</td>
+          </tr>
+          <tr>
+            <td>Google LLC — ML Kit and Play services</td>
+            <td>Independent controller for the technical usage data</td>
+            <td>Performance and utilisation metrics for the library (section 5)</td>
+          </tr>
+          <tr>
+            <td>The provider of your speech engine</td>
+            <td>Independent controller</td>
+            <td>Text sent for reading aloud, depending on the engine you have set (section 6)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>No other disclosure to third parties is envisaged, other than where required by law or by a judicial authority. <strong>Your data is never sold, transferred or traded to anyone.</strong></p>
+  </section>
+
+  <section id="security">
+    <h2><span class="n">15</span>Security</h2>
+    <p>The most effective safeguard DysLexic applies is structural: <strong>content that is never collected cannot be breached.</strong> Since there is no central repository of users' texts, there is no breach capable of exposing them.</p>
+    <p>On the device, the app's data lives in the private area the operating system assigns to it, isolated from other applications and protected by the device's encryption where that is switched on.</p>
+    <p>Communications with RevenueCat and with the stores travel over encrypted channels (HTTPS/TLS). Subscription data is protected by the technical and organisational measures those providers apply, described in their respective notices.</p>
+    <p>To protect your own texts, we suggest keeping a screen lock enabled, keeping the operating system up to date, and installing the app only from official stores.</p>
+  </section>
+
+  <section id="rights">
+    <h2><span class="n">16</span>Your rights, and how to use them</h2>
+    <p>The GDPR gives you the rights set out in Articles 15 to 22: access to your data, rectification, erasure, restriction of processing, portability, objection, and withdrawal of consent.</p>
+
+    <h3>For data on the device</h3>
+    <p>Because this data stays in your possession, these rights are exercised directly in the app, with immediate effect and without having to ask anyone:</p>
+    <ul>
+      <li><strong>Access it:</strong> it is all visible in the app — saved texts in their own section, preferences in the settings.</li>
+      <li><strong>Correct it:</strong> any text or preference can be changed at any moment.</li>
+      <li><strong>Erase it:</strong> delete individual saved texts, or uninstall the app to remove everything.</li>
+      <li><strong>Take it with you:</strong> any text can be copied to the clipboard, printed or exported as a document.</li>
+      <li><strong>Withdraw consent:</strong> the camera and gallery permissions are revoked from your operating system's settings.</li>
+    </ul>
+
+    <h3>For subscription data</h3>
+    <p>This is the data the Owner can act on, and your rights over it are exercised by writing to <a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a>. You may ask what data is associated with your subscriber profile, have it corrected or erased, have its processing restricted, receive it in a structured, commonly used and machine-readable format, or object to processing founded on legitimate interest.</p>
+    <p>To let your record be located, please quote the <strong>order number of your purchase</strong>: Google Play and the App Store both include it in the confirmation email they send. The app does not display your subscriber identifier on screen, so there is nothing to copy from inside the app.</p>
+    <p>If the data held is genuinely insufficient to identify you, Article 11 of the GDPR applies: the Owner is not obliged to obtain additional information for the sole purpose of identifying you, will say so plainly, and will act on your request as soon as you supply details that make the record findable.</p>
+    <p>Requests are free of charge, and you will receive an answer without undue delay and in any event within one month of receipt, as Article 12 of the GDPR provides. Data that must be retained by law, accounting records in particular, is unaffected.</p>
+
+    <h3>Complaining to a supervisory authority</h3>
+    <p>You have the right to lodge a complaint with a supervisory authority. In Italy this is the <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>; if you live in another Member State of the European Union, you may approach the competent authority in your own country. You may also bring proceedings before a court.</p>
+  </section>
+
+  <section id="updates">
+    <h2><span class="n">17</span>Updates to this notice</h2>
+    <p>This notice may be updated when the app changes — for example if new features or new providers were to be introduced that involve processing different from what is described here.</p>
+    <p>The date at the top of the page always shows the most recent revision. Where a change is substantial — that is, where it concerns the nature of the data processed or the purposes of the processing — it will be signalled inside the app and, where necessary, you will be asked to acknowledge the notice again. Earlier versions can be requested from the Owner.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="n">18</span>How to reach us</h2>
+    <p>For questions, clarifications, reports, or to exercise any of your rights:</p>
+    <div class="owner">
+      <span class="name">Meraviglia Greta</span>
+      <p>Controller</p>
+      <p><a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a></p>
+    </div>
+    <p>No Data Protection Officer has been appointed, the conditions in Article 37 of the GDPR not being met.</p>
+  </section>
+
+  <footer class="foot">
+    <p>DysLexic — Privacy Policy<span class="sep">·</span>Version 2.0<span class="sep">·</span>Last updated 1 September 2026</p>
+    <p>This notice was written for the DysLexic application (<code>com.kimboj.dyslexic</code>) and relates to that application alone. See also the <a href="./terms-and-conditions.html">Terms and Conditions</a>.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>

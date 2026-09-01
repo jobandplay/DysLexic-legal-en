@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Terms and Conditions of Use — DysLexic</title>
+<meta name="description" content="Terms and Conditions of Use for the DysLexic reading-support app: licence, Pro subscription, functional limits, liability, accessibility and governing law.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --page:#ffffff;
+    --tint:#f6f8f9;
+    --tint-2:#eef2f3;
+    --ink:#16232b;
+    --ink-2:#3b4b55;
+    --muted:#64747e;
+    --line:#e3e8ea;
+    --line-strong:#cdd8db;
+    --accent:#0b5a60;
+    --accent-ink:#084a4f;
+    --accent-tint:#eef6f6;
+    --accent-line:#c9e2e3;
+    --amber:#7a5510;
+    --amber-tint:#fdf7ea;
+    --amber-line:#eddfbc;
+    --radius:12px;
+    --font:"Atkinson Hyperlegible","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--ink);
+    font-family:var(--font);
+    font-size:17.5px;
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration:none}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+  p,li{overflow-wrap:break-word}
+  strong{font-weight:700}
+
+  /* ---------- document switcher ---------- */
+  .docnav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:saturate(160%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .docnav-inner{
+    max-width:860px;margin:0 auto;padding:11px 22px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .brand{font-weight:700;letter-spacing:-.01em;font-size:1rem;color:var(--ink)}
+  .brand span{
+    font-weight:400;color:var(--muted);font-size:.82rem;
+    margin-left:8px;padding-left:9px;border-left:1px solid var(--line-strong);
+  }
+  .docnav nav{display:flex;gap:6px;flex-wrap:wrap}
+  .docnav nav a{
+    font-size:.85rem;text-decoration:none;color:var(--muted);
+    padding:5px 11px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+  }
+  .docnav nav a:hover{color:var(--accent-ink);background:var(--tint)}
+  .docnav nav a.is-current{
+    color:var(--accent-ink);background:var(--accent-tint);
+    border-color:var(--accent-line);font-weight:700;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{border-bottom:1px solid var(--line);background:var(--page)}
+  .masthead .inner{max-width:860px;margin:0 auto;padding:52px 22px 40px}
+  .eyebrow{
+    display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);
+    background:var(--accent-tint);border:1px solid var(--accent-line);
+    padding:4px 11px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{margin:0 0 14px;font-size:2.25rem;line-height:1.2;letter-spacing:-.02em}
+  .lead{margin:0;font-size:1.08rem;color:var(--ink-2);max-width:62ch}
+  .meta{
+    margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:.88rem;color:var(--muted);
+    display:flex;gap:8px 20px;flex-wrap:wrap;
+  }
+  .meta span{display:inline-flex;gap:6px}
+  .meta b{font-weight:700;color:var(--ink-2)}
+
+  /* ---------- body ---------- */
+  .doc{max-width:860px;margin:0 auto;padding:0 22px 100px}
+
+  section{scroll-margin-top:78px;padding-top:14px;margin-top:44px;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none}
+
+  h2{
+    margin:0 0 14px;font-size:1.34rem;line-height:1.32;letter-spacing:-.01em;
+    display:flex;align-items:baseline;gap:13px;
+  }
+  h2 .n{
+    flex:none;min-width:1.9em;font-size:.82rem;font-weight:700;
+    color:var(--accent);letter-spacing:.02em;
+    transform:translateY(-1px);
+  }
+  h3{margin:30px 0 8px;font-size:1.03rem;color:var(--accent-ink);line-height:1.4}
+  h3 .n{font-weight:700;color:var(--muted);margin-right:7px;font-size:.92rem}
+
+  p{margin:0 0 14px}
+  ul,ol{padding-left:24px;margin:0 0 16px}
+  li{margin-bottom:8px}
+  li::marker{color:var(--accent)}
+
+  /* ---------- blocks ---------- */
+  .owner{
+    background:var(--page);border:1px solid var(--line-strong);
+    border-radius:var(--radius);padding:18px 22px;margin:18px 0 8px;
+  }
+  .owner .name{font-weight:700;font-size:1.05rem;display:block;margin-bottom:4px}
+  .owner p{margin:2px 0;font-size:.96rem;color:var(--ink-2)}
+
+  .key{
+    background:var(--accent-tint);border:1px solid var(--accent-line);
+    border-left:4px solid var(--accent);
+    border-radius:var(--radius);padding:17px 20px;margin:22px 0;
+  }
+  .key p{margin:0}
+  .key p+p{margin-top:11px}
+  .key .label{
+    display:block;font-size:.72rem;font-weight:700;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:7px;
+  }
+
+  .warn{
+    background:var(--amber-tint);border:1px solid var(--amber-line);
+    border-left:4px solid #c99a3a;
+    border-radius:var(--radius);padding:17px 20px;margin:22px 0;
+    color:var(--amber);font-size:.98rem;
+  }
+  .warn p{margin:0}
+  .warn p+p{margin-top:11px}
+  .warn strong{color:inherit}
+
+  /* ---------- summary ---------- */
+  .summary{
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;margin:36px 0 8px;background:var(--tint);
+  }
+  .summary h2{
+    font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px;display:block;
+  }
+  .summary ul{list-style:none;padding:0;margin:0 0 14px}
+  .summary li{
+    display:flex;gap:11px;margin-bottom:11px;font-size:.97rem;color:var(--ink-2);
+  }
+  .summary li::before{
+    content:"";flex:none;width:7px;height:7px;border-radius:50%;
+    background:var(--accent);margin-top:.55em;
+  }
+  .summary .disclaimer{
+    margin:0;padding-top:13px;border-top:1px solid var(--line-strong);
+    font-size:.86rem;color:var(--muted);
+  }
+
+  /* ---------- table of contents ---------- */
+  .toc{
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;margin:26px 0 8px;
+  }
+  .toc h2{
+    font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px;display:block;
+  }
+  .toc ol{
+    margin:0;padding:0;list-style:none;
+    columns:2;column-gap:34px;
+  }
+  .toc li{
+    margin:0 0 8px;break-inside:avoid;font-size:.95rem;
+    display:flex;gap:10px;align-items:baseline;
+  }
+  .toc li .n{
+    flex:none;min-width:1.6em;text-align:right;
+    color:var(--muted);font-size:.82rem;font-variant-numeric:tabular-nums;
+  }
+  .toc a{text-decoration:none;color:var(--ink-2)}
+  .toc a:hover{color:var(--accent-ink);text-decoration:underline}
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:64px;padding-top:26px;border-top:1px solid var(--line);
+    font-size:.9rem;color:var(--muted);
+  }
+  .foot p{margin:0 0 8px}
+  .foot .sep{margin:0 8px;color:var(--line-strong)}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:720px){
+    body{font-size:16.5px}
+    .masthead .inner{padding:34px 20px 30px}
+    h1{font-size:1.72rem}
+    h2{font-size:1.18rem;gap:10px}
+    .toc ol{columns:1}
+    .doc{padding:0 20px 76px}
+  }
+
+  /* ---------- print ---------- */
+  @media print{
+    .docnav,.toc{display:none}
+    body{font-size:10.5pt;line-height:1.5;color:#000}
+    .masthead{border:none}
+    .masthead .inner,.doc{padding:0;max-width:none}
+    section{break-inside:auto;border-top:1px solid #bbb}
+    h2,h3{break-after:avoid}
+    .key,.warn,.owner,.summary{
+      background:none;border:1px solid #999;break-inside:avoid;
+    }
+    a{color:#000;text-decoration:none}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt;color:#444}
+  }
+</style>
+</head>
+<body>
+
+<div class="docnav">
+  <div class="docnav-inner">
+    <div class="brand">DysLexic<span>Legal documents</span></div>
+    <nav aria-label="Legal documents">
+      <a href="./terms-and-conditions.html" class="is-current" aria-current="page">Terms &amp; Conditions</a>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="inner">
+    <div class="eyebrow">Agreement</div>
+    <h1>Terms and Conditions of Use</h1>
+    <p class="lead">These Terms govern your use of the DysLexic mobile application. By downloading, installing or using the app, you accept them in full.</p>
+    <div class="meta">
+      <span><b>In force from:</b> 1 September 2026</span>
+      <span><b>Version:</b> 2.0</span>
+      <span><b>Application:</b> DysLexic (com.kimboj.dyslexic)</span>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+
+  <div class="summary">
+    <h2>The essentials</h2>
+    <ul>
+      <li>DysLexic is a reading-support tool. It is <strong>not a medical device</strong> and promises no clinical or educational outcome.</li>
+      <li>The core features are free. A paid subscription called <strong>Pro</strong> adds further features; it renews automatically and there is <strong>no free trial</strong>.</li>
+      <li>Payment is handled entirely by the app store. The Owner never sees or holds your card details.</li>
+      <li>Automatic text recognition and document extraction make mistakes. <strong>Always check the text</strong> before you rely on it.</li>
+      <li>Your saved texts live only on your device. There is <strong>no cloud backup</strong>, and nothing can be recovered once it is gone.</li>
+    </ul>
+    <p class="disclaimer">This box is a plain-language summary offered for convenience. It is not part of the agreement: only the full text below has contractual effect.</p>
+  </div>
+
+  <div class="warn" role="note">
+    <p><strong>Minimum age.</strong> The Application may be used from the age of 14. Anyone under 14 may use it only under the supervision and with the consent of a parent or of the person holding parental responsibility (see section 8).</p>
+  </div>
+
+  <div class="owner">
+    <span class="name">Meraviglia Greta</span>
+    <p>Owner of the Application and of the service</p>
+    <p>Contact: <a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a></p>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><span class="n">1</span><a href="#scope">Scope and definitions</a></li>
+      <li><span class="n">2</span><a href="#audience">Who the Application is for</a></li>
+      <li><span class="n">3</span><a href="#nature">What DysLexic is, and what it is not</a></li>
+      <li><span class="n">4</span><a href="#rights">Ownership and rights in content</a></li>
+      <li><span class="n">5</span><a href="#licence">Licence to use the software</a></li>
+      <li><span class="n">6</span><a href="#stores">Distribution through app stores</a></li>
+      <li><span class="n">7</span><a href="#subscription">Subscription, prices and payment</a></li>
+      <li><span class="n">8</span><a href="#age">Age requirements</a></li>
+      <li><span class="n">9</span><a href="#use">Acceptable use</a></li>
+      <li><span class="n">10</span><a href="#limits">Functional limits you accept</a></li>
+      <li><span class="n">11</span><a href="#local">Local storage and absence of backup</a></li>
+      <li><span class="n">12</span><a href="#conformity">Conformity of the service and changes to it</a></li>
+      <li><span class="n">13</span><a href="#withdrawal">Right of withdrawal for consumers</a></li>
+      <li><span class="n">14</span><a href="#liability">Disclaimers and limitation of liability</a></li>
+      <li><span class="n">15</span><a href="#documents">Documents forming part of these Terms</a></li>
+      <li><span class="n">16</span><a href="#accessibility">Accessibility</a></li>
+      <li><span class="n">17</span><a href="#termination">Termination</a></li>
+      <li><span class="n">18</span><a href="#changes">Changes to these Terms</a></li>
+      <li><span class="n">19</span><a href="#law">Governing law and jurisdiction</a></li>
+      <li><span class="n">20</span><a href="#disputes">Resolving disputes</a></li>
+      <li><span class="n">21</span><a href="#final">Final provisions</a></li>
+      <li><span class="n">22</span><a href="#contact">How to reach us</a></li>
+    </ol>
+  </nav>
+
+  <section id="scope">
+    <h2><span class="n">1</span>Scope and definitions</h2>
+    <p>Throughout this document, <strong>“the Application”</strong> means the DysLexic mobile application, the services delivered through it, and all software supplied with it together with the accompanying documentation.</p>
+    <p><strong>“Owner”</strong> means the party identified above, who provides the Application. <strong>“User”</strong>, or “you”, means the natural person who downloads, installs or uses the Application.</p>
+    <p>Section headings are included for ease of reading only and do not affect how the clauses are interpreted.</p>
+  </section>
+
+  <section id="audience">
+    <h2><span class="n">2</span>Who the Application is for</h2>
+    <p>The Application is offered <strong>to consumers only</strong> — that is, to natural persons acting for purposes outside any trade, business, craft or profession they may carry on.</p>
+    <p>It is not offered to Users located in territories subject to restrictive measures or sanctions imposed by a competent authority, nor to persons or entities named on sanctions lists. Should such a circumstance come to light after the contract has been entered into, the Owner may suspend or terminate the relationship.</p>
+  </section>
+
+  <section id="nature">
+    <h2><span class="n">3</span>What DysLexic is, and what it is not</h2>
+    <p>The Application is a reading-support tool of a purely technological nature.</p>
+    <div class="key">
+      <span class="label">Please read carefully</span>
+      <p><strong>DysLexic is not a medical device.</strong> It is not intended to diagnose, prevent, monitor, treat or alleviate dyslexia, any other specific learning difficulty, or any illness or clinical condition.</p>
+      <p>The Application provides no diagnosis, clinical assessment, therapy or rehabilitation pathway, and it is in no way a substitute for the opinion or intervention of doctors, speech and language therapists, psychologists, specialist teachers or other qualified professionals.</p>
+      <p>No outcome is promised or guaranteed in terms of reading speed, accuracy or comprehension.</p>
+    </div>
+  </section>
+
+  <section id="rights">
+    <h2><span class="n">4</span>Ownership and rights in content</h2>
+
+    <h3><span class="n">4.1</span>Rights held by the Owner</h3>
+    <p>All rights in the Application and in its contents are reserved to the Owner or to the respective rights holders. These include, by way of example and without limitation: the source code, the graphics, the interface, the texts, the trade marks, the name and the logos, and the structure and organisation of the features.</p>
+
+    <h3><span class="n">4.2</span>What is not permitted</h3>
+    <p>Except with the Owner’s prior written authorisation, or to the extent permitted by mandatory provisions of law, you may not: copy, reproduce, modify, translate, decompile or reverse-engineer the Application; extract parts of it for reuse in other products; remove or alter any notice of ownership; or distribute, license, rent or resell it to third parties.</p>
+
+    <h3><span class="n">4.3</span>Third-party components</h3>
+    <p>The typefaces, libraries and third-party components included in the Application remain the property of their respective authors and are used under their own licences, which can be consulted inside the Application itself.</p>
+
+    <h3><span class="n">4.4</span>Content that belongs to you</h3>
+    <p>The texts, images and documents you type, capture with the camera, select from your gallery or import remain <strong>exclusively yours</strong> and are treated as private content. The Owner acquires no rights over them and has no access to them whatsoever, for the simple reason that they never leave your device.</p>
+    <p>You are solely responsible for that material and you warrant that you hold every right required to use it.</p>
+  </section>
+
+  <section id="licence">
+    <h2><span class="n">5</span>Licence to use the software</h2>
+    <p>The software belongs to the Owner and is licensed to you for use; ownership of it is not transferred. The licence is <strong>personal, non-exclusive, non-transferable and revocable</strong> in the event of a breach of these Terms, and is granted solely for use of the Application in accordance with its intended purpose.</p>
+    <p>There is no limit on the number of devices on which you may install and use the Application, and simultaneous use on more than one device is permitted.</p>
+    <p>For the Application to work correctly, devices must be <strong>of a commonly used type and kept up to date</strong>, running a supported version of the operating system. The Owner does not guarantee operation on devices that are obsolete, modified, or no longer supported by their manufacturer.</p>
+    <p>The software licensed to you will remain valid and operative <strong>for the entire term of the subscription</strong> you have taken out.</p>
+  </section>
+
+  <section id="stores">
+    <h2><span class="n">6</span>Distribution through app stores</h2>
+    <p>The Application is distributed through digital stores operated by third parties. Downloading, installing and updating it, as well as any in-app purchase, are also governed by the contractual terms of the store used, which you are required to observe and which apply in addition to these Terms.</p>
+    <p>The Owner has no control over the policies, the availability or the operation of those stores, nor over the devices and operating systems on which the Application runs.</p>
+    <p>The Application may require updates to be installed where these are necessary to keep it compliant, secure and functioning correctly. If an update is not installed, some or all features may become unavailable.</p>
+  </section>
+
+  <section id="subscription">
+    <h2><span class="n">7</span>Subscription, prices and payment</h2>
+
+    <h3><span class="n">7.1</span>Free features and subscription features</h3>
+    <p>The Application can be used free of charge in all of its core functions. A paid subscription, named <strong>Pro</strong>, unlocks additional features; an up-to-date list of them is available inside the Application.</p>
+
+    <h3><span class="n">7.2</span>Nature of what is supplied</h3>
+    <p>The subscription is for the supply of a <strong>digital service</strong> providing continuous access throughout the period subscribed for. It is not the one-off transfer of goods.</p>
+
+    <h3><span class="n">7.3</span>Prices</h3>
+    <p>Prices are shown in the Application and in the distribution store and are always <strong>inclusive of VAT and of any other applicable tax</strong>. No charges beyond those displayed before the purchase is completed will be applied.</p>
+
+    <h3><span class="n">7.4</span>No free trial period</h3>
+    <div class="key">
+      <p><strong>There is no free trial period.</strong> The subscription is chargeable from the very first period, and payment is taken when you subscribe, in accordance with the store’s procedures.</p>
+    </div>
+
+    <h3><span class="n">7.5</span>How payment is taken</h3>
+    <p>Payment is made <strong>exclusively through the payment system of the distribution store</strong>. The Owner does not collect, process or retain credit-card details or the details of any other payment instrument: that data is handled solely by the third-party provider, under its own terms and its own privacy policy.</p>
+
+    <h3><span class="n">7.6</span>Term and automatic renewal</h3>
+    <p>The subscription runs for the fixed period indicated at the time of purchase and <strong>renews automatically</strong> on expiry for a further period of the same length, unless cancelled.</p>
+    <p>You may cancel at any time through your store account settings, within the deadlines set by the store. Cancellation takes effect at the end of the period already under way: access to the features remains active until that date, and no refund is due for the unused part of the period, except where mandatory law or the store’s own policies provide otherwise.</p>
+    <p>If a renewal payment fails — because of insufficient funds, an expired or revoked payment method, or for any other reason — the renewal does not take effect and access to the subscription features is suspended, following the reminder and grace procedures operated by the store. You can restore the subscription by updating your payment method.</p>
+
+    <h3><span class="n">7.7</span>How the contract is formed</h3>
+    <p>The presentation of features and of their prices does not constitute a binding offer: the contract is formed when the Owner accepts the order, where applicable through the store.</p>
+
+    <h3><span class="n">7.8</span>Notices</h3>
+    <p>Notices relating to the contract are sent to the email address associated with your store account, or made available inside the Application.</p>
+  </section>
+
+  <section id="age">
+    <h2><span class="n">8</span>Age requirements</h2>
+    <p>The Application may be used by Users who have reached the age of <strong>14</strong>, in line with the age of digital consent established in Italy.</p>
+    <p>Users under 14 may use the Application <strong>only under the supervision and with the consent of a parent or of the person holding parental responsibility</strong>, who is responsible for authorising use of the service, for any subscription taken out, and for the processing of the minor’s personal data as described in the Privacy Policy.</p>
+  </section>
+
+  <section id="use">
+    <h2><span class="n">9</span>Acceptable use</h2>
+    <p>You undertake to use the Application in compliance with the law, with these Terms and with the rights of third parties. In particular, you must not:</p>
+    <ul>
+      <li>use the Application for unlawful purposes, or for purposes otherwise contrary to mandatory rules, to public policy or to public morality;</li>
+      <li>use the Application to infringe copyright, trade marks, patents or any other right belonging to a third party — including by capturing, reproducing or processing protected material without the rights holder’s permission;</li>
+      <li>capture or process third parties’ documents or data in breach of applicable data protection or confidentiality law;</li>
+      <li>attempt to circumvent, disable or compromise the technical measures that make the Application work or keep it secure, including those governing the subscription features;</li>
+      <li>use the Application in a way that impairs its operation or that causes harm to the Owner or to other Users.</li>
+    </ul>
+    <p>Where these rules are breached, the Owner may suspend or discontinue access to the features, without prejudice to any right to compensation for the loss suffered.</p>
+  </section>
+
+  <section id="limits">
+    <h2><span class="n">10</span>Functional limits you accept</h2>
+    <p>Some of what the Application does depends on automatic processing, or on components belonging to your device. The limits set out below are inherent to those technologies. By using the corresponding features, you acknowledge and accept them.</p>
+
+    <h3><span class="n">10.1</span>Accuracy of text recognition (OCR)</h3>
+    <p>Optical character recognition is an automatic technology and is inherently prone to error. Extracted text may turn out to be incomplete, inaccurate, disordered or altered, especially where there are:</p>
+    <ul>
+      <li>images that are blurred, poorly lit, skewed or of low resolution;</li>
+      <li>handwriting, decorative lettering or non-standard typefaces;</li>
+      <li>complex page layouts, multi-column text, tables or charts;</li>
+      <li>languages, alphabets or symbols the recognition engine does not support.</li>
+    </ul>
+    <div class="key">
+      <p><strong>You must always verify that recognised text is correct before making use of it</strong>, taking particular care in sensitive contexts such as medical, pharmaceutical, legal, contractual, financial, educational or safety-related documents.</p>
+      <p>The Owner is not liable for any loss, whether direct or indirect, arising from errors, omissions or inaccuracies in automatic recognition, or from any reliance placed on text obtained in this way.</p>
+    </div>
+
+    <h3><span class="n">10.2</span>Importing documents, and technical limits</h3>
+    <p>The Application can import text from files in <strong>.txt, .docx, .odt, .pdf and .rtf</strong> format, by means of automatic processing carried out on the device. The following limits apply, and you declare that you are aware of them and accept them:</p>
+    <ul>
+      <li>only textual content is extracted: formatting, images, tables, notes and other non-textual elements are not preserved;</li>
+      <li>files that are password-protected, damaged, or in an unsupported format cannot be imported;</li>
+      <li>files larger than 20 MB are not supported;</li>
+      <li>imported text may be truncated where it exceeds the maximum number of characters the Application can handle;</li>
+      <li>PDF documents made up solely of scanned images, with no digital text layer, may produce no result at all.</li>
+    </ul>
+    <p><strong>Text extraction is not always accurate.</strong> Processing is automatic and, where a document contains complex layouts, tables, multi-column text, notes, headers or non-standard characters, the resulting text may be incomplete or inaccurate, or may be returned in an order different from that of the original document. The duty to check set out in section 10.1, and the exclusion of the Owner’s liability described there, apply here as well.</p>
+    <p>Importing does not alter the original file in any way: it remains unchanged on your device.</p>
+
+    <h3><span class="n">10.3</span>Speech and printing</h3>
+    <p>The read-aloud feature uses the <strong>speech engine belonging to your device’s operating system</strong>. Voice quality, accuracy of pronunciation, actual reading speed and the availability of individual languages depend entirely on the device, on the operating system and on the voices installed on it, and are outside the Owner’s control.</p>
+    <p>In the same way, printing relies on the device’s native printing system: which printers are available, which options are offered and how the page finally looks on paper depend on your operating system and hardware.</p>
+  </section>
+
+  <section id="local">
+    <h2><span class="n">11</span>Local storage and absence of backup</h2>
+    <div class="key">
+      <span class="label">No recovery is possible</span>
+      <p>Saved texts, settings and preferences are stored <strong>solely on your own device</strong>. There is no remote backup, no cloud synchronisation and no means by which the Owner could recover them.</p>
+      <p>Uninstalling the Application, clearing its data, resetting the device, or any malfunction, loss or replacement of the device results in the <strong>permanent and irreversible loss</strong> of that material. You alone are responsible for keeping your data and for making any backup copies of it.</p>
+    </div>
+  </section>
+
+  <section id="conformity">
+    <h2><span class="n">12</span>Conformity of the service and changes to it</h2>
+    <p>The Owner warrants that the digital service conforms to the contract in accordance with applicable consumer protection law, and undertakes to supply, for the entire term of the subscription, the updates needed to keep it conforming, security updates included.</p>
+    <p>Where the service fails to conform, you as a consumer are entitled to have conformity restored or — where the conditions laid down by law are met — to a reduction in price or to termination of the contract, as provided by applicable law.</p>
+    <p>The Owner may change the characteristics of the digital service, going beyond what is necessary to maintain conformity, for technical reasons, for reasons of security, in response to technological developments, or to comply with legal requirements. Where such a change adversely affects your access to the service or your use of it to more than a negligible extent, you will be informed reasonably in advance and, where the law so provides, you may terminate the contract at no cost.</p>
+  </section>
+
+  <section id="withdrawal">
+    <h2><span class="n">13</span>Right of withdrawal for consumers</h2>
+    <div class="key">
+      <p><strong>The right of withdrawal belongs to European consumers only</strong>, to the extent provided by law. A consumer User resident in the European Union has the right to withdraw from the contract within <strong>fourteen days</strong> of its conclusion, without having to give any reason.</p>
+    </div>
+    <p>However, because what is supplied is <strong>digital content not delivered on a tangible medium</strong>, the right of withdrawal <strong>does not arise</strong> where the contract places the consumer under an obligation to pay and performance has begun with the consumer’s express consent, given after the consumer has acknowledged that the right of withdrawal will be lost. When you subscribe you give that consent and receive that information: immediate access to the subscription features therefore extinguishes the right of withdrawal.</p>
+
+    <h3><span class="n">13.1</span>Consumers in the United Kingdom</h3>
+    <p>Consumers resident in the United Kingdom have the <strong>right to cancel</strong> conferred by local legislation. Since what is offered through the Application is digital content whose supply begins immediately, with the User’s express consent and with their acknowledgment that the right will be lost, the right to cancel <strong>does not apply</strong>.</p>
+
+    <h3><span class="n">13.2</span>Consumers in Brazil</h3>
+    <p>Consumers resident in Brazil have the <strong>right of regret</strong> conferred by the Consumer Defence Code. That right <strong>does not arise</strong> in the case of the supply of digital content whose delivery and availability have already begun within seven days of the conclusion of the contract, with the consumer’s prior express consent and with their acknowledgment that the right of regret will be lost — a condition that is met here, given the immediate access granted to the subscription features.</p>
+
+    <p>Where the right does arise, an explicit statement sent to <a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a> is sufficient to exercise it. The refund procedures operated by the store through which the purchase was made are unaffected.</p>
+  </section>
+
+  <section id="liability">
+    <h2><span class="n">14</span>Disclaimers and limitation of liability</h2>
+
+    <h3><span class="n">14.1</span>Nature of the service</h3>
+    <p>As stated in section 3, the Application is a reading-support tool of a purely technological nature. <strong>It is not a medical device</strong>, it provides neither diagnosis nor therapy, and it does not replace the opinion of qualified professionals. No improvement in reading is promised or guaranteed. The functional limits described in section 10 form part of this disclaimer.</p>
+
+    <h3><span class="n">14.2</span>Limitations</h3>
+    <p>To the extent permitted by applicable law, the Owner is not liable for:</p>
+    <ul>
+      <li>losses that are not the direct consequence of a breach of these Terms by the Owner;</li>
+      <li>loss of profit or indirect loss, such as loss of revenue, of anticipated savings, of contractual or commercial relationships, of goodwill, or damage to reputation;</li>
+      <li>damage or loss caused by interruptions or malfunctions attributable to force majeure or to unforeseeable events beyond the Owner’s control, such as failures of electricity or communications networks, unavailability of the Internet, cyber attacks, or interruptions affecting third-party products, services or applications used by the Application;</li>
+      <li>errors, omissions or inaccuracies in automatic text recognition and in extraction from documents, and any decision taken in reliance on the results so obtained;</li>
+      <li>loss of content stored locally on the device, no remote backup being provided;</li>
+      <li>the quality, pronunciation and availability of speech voices, and the operation of printing, all of which depend on the User’s operating system and hardware.</li>
+    </ul>
+    <p>It is your responsibility to take adequate measures to secure your own device, including protection against malicious software, and to keep copies of any data that matters to you.</p>
+
+    <h3><span class="n">14.3</span>Limits that cannot be excluded</h3>
+    <div class="key">
+      <p>Nothing in these Terms excludes or limits the Owner’s liability in cases where the law does not permit it to be excluded or limited — in particular for personal injury, or for wilful misconduct or gross negligence — nor does anything here affect the rights that consumer protection law confers on you on a mandatory basis.</p>
+    </div>
+
+    <h3><span class="n">14.4</span>Indemnity</h3>
+    <p>You will indemnify the Owner and hold the Owner harmless against any claim, demand for compensation or action brought by a third party arising from use of the Application contrary to these Terms or to the law, or from the content you process by means of the Application.</p>
+
+    <h3><span class="n">14.5</span>Consumers in Australia</h3>
+    <p>As regards consumers resident in Australia, nothing in these Terms excludes, restricts or modifies the guarantees, conditions and non-excludable rights conferred by Australian consumer law. Where those guarantees apply and limitation of liability is permitted, the Owner’s liability is limited, at the Owner’s option, to supplying the service again or to refunding the amount paid for it.</p>
+
+    <h3><span class="n">14.6</span>No further relationship is created</h3>
+    <p>Nothing in these Terms creates any relationship of employment, agency, association or partnership between you and the Owner.</p>
+  </section>
+
+  <section id="documents">
+    <h2><span class="n">15</span>Documents forming part of these Terms</h2>
+    <p>The <strong>Privacy Policy</strong> of the Application forms an integral and binding part of these Terms, and you declare that you have read it:</p>
+    <div class="owner">
+      <span class="name">Privacy Policy</span>
+      <p>How the Application handles data, which data leaves the device, and what rights you have.</p>
+      <p><a href="./privacy-policy.html">https://jobandplay.github.io/DysLexic-legal/privacy-policy.html</a></p>
+    </div>
+    <p>There is nothing else to read. The separate annexes published previously — the specific conditions of use and the notice on text recognition and age limits — have been merged into this document and into the Privacy Policy, and no longer exist as standalone pages.</p>
+    <p>Where these Terms and the Privacy Policy conflict, these Terms prevail, unless the other document lays down conditions more favourable to you as a consumer.</p>
+  </section>
+
+  <section id="accessibility">
+    <h2><span class="n">16</span>Accessibility</h2>
+    <p>DysLexic is designed to support reading for people with dyslexia and other reading difficulties: accessibility is the purpose of the Application, not an optional extra.</p>
+    <p>Without a subscription, the following are available: high-legibility typefaces chosen by the User, including typefaces designed specifically for dyslexia; adjustment of text size, line spacing and the spacing between letters and words; selective colouring of the letters most easily confused with one another; a choice between a light and a dark background for the reading area; speech synthesis with adjustable speed; and optical text recognition from the camera or from images already on the device, within a daily usage limit.</p>
+    <p>With a subscription, the following are available in addition: optical text recognition with no daily limit; extraction of text from the User’s own documents; an assisted reading mode that emphasises the opening portion of each word; and printing of the text with the formatting the User has chosen.</p>
+    <p>The controls and interactive elements of the interface carry descriptive text labels, which allow them to be identified by the assistive technologies built into the device, such as screen readers and voice control systems. The Application has not been tested with every assistive technology in existence, nor with every possible configuration of them.</p>
+    <p>To report an accessibility barrier or to suggest an improvement, please write to <a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a>.</p>
+  </section>
+
+  <section id="termination">
+    <h2><span class="n">17</span>Termination</h2>
+    <p>The Owner may terminate the contract with immediate effect, by notice to you, in the event of a serious breach of these Terms; or where performance becomes impossible or excessively onerous for reasons not attributable to the Owner; or where you become subject to restrictive measures or sanctions imposed by a competent authority.</p>
+    <p>You may stop using the Application and uninstall it at any time, subject to what section 7.6 provides regarding cancellation of the subscription.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="n">18</span>Changes to these Terms</h2>
+    <p>The Owner reserves the right to amend these Terms for technical or organisational reasons, or in order to comply with legal requirements. Changes are made known by publication at the address of this document, stating <strong>the date from which they take effect</strong>, and are communicated to you by email or inside the Application.</p>
+    <p>Continuing to use the Application after that date constitutes acceptance of the changes. If you do not wish to accept them, you may stop using the Application and cancel your subscription.</p>
+    <p>As regards consumer Users resident in France, changes are notified at least <strong>one month</strong> before the date on which they take effect, and the User has the right to terminate the contract for up to <strong>four months</strong> after that date.</p>
+  </section>
+
+  <section id="law">
+    <h2><span class="n">19</span>Governing law and jurisdiction</h2>
+    <p>These Terms are governed by <strong>Italian law</strong>, being the law of the place where the Owner is established.</p>
+    <p>This is without prejudice to the application, in favour of you as a consumer, of any more favourable mandatory provisions of the law of the country in which you are habitually resident. The same reservation applies to consumers resident in <strong>Switzerland</strong>, who retain the mandatory protections of Swiss law, and to consumers resident in <strong>Brazil</strong>, who retain the mandatory protections of the Consumer Defence Code.</p>
+    <p>Any dispute falls within the jurisdiction of the courts of the place where the Owner is established. <strong>This does not apply to consumers</strong>: as regards consumers, the mandatory forum laid down by law continues to apply and, in particular, for consumers resident in the European Union, the United Kingdom, Switzerland, Norway or Iceland, that of their place of residence. The same reservation applies to consumers resident in Brazil.</p>
+    <p>As regards consumer Users resident in the United Kingdom, their ability to bring proceedings before the courts of their own country of residence is unaffected.</p>
+  </section>
+
+  <section id="disputes">
+    <h2><span class="n">20</span>Resolving disputes</h2>
+    <p>Before bringing court proceedings, you are invited to contact the Owner at <a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a>, setting out the problem you have encountered: the Owner will make every effort to find an amicable solution.</p>
+  </section>
+
+  <section id="final">
+    <h2><span class="n">21</span>Final provisions</h2>
+    <p><strong>Mandatory rules prevail.</strong> Mandatory provisions of applicable consumer protection law take precedence over anything laid down in these Terms. Where a provision of these Terms turns out to be less favourable to you as a consumer than a mandatory rule of law, that rule applies instead.</p>
+    <p><strong>Severability.</strong> If any single provision is void, invalid or ineffective, the validity of the remaining provisions is unaffected and they continue to apply. The invalid provision is replaced by operation of law with the applicable statutory provision or, failing that, with the provision that comes closest to the purpose pursued, to the extent the law permits.</p>
+    <p><strong>No waiver.</strong> A failure to exercise a right conferred by these Terms is not a waiver of that right, nor does it prevent the right from being relied on later.</p>
+    <p><strong>Assignment.</strong> You may not assign the contract, or any right arising from it, to a third party without the Owner’s written consent. The Owner may assign the contract as part of a transfer of the business or of a branch of it, without prejudice to your rights.</p>
+    <p><strong>Survival.</strong> The provisions concerning rights in content, disclaimers and limitation of liability, indemnity, governing law and jurisdiction remain in force after the relationship has come to an end.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="n">22</span>How to reach us</h2>
+    <p>For any question concerning these Terms:</p>
+    <div class="owner">
+      <span class="name">Meraviglia Greta</span>
+      <p>Owner of the Application</p>
+      <p><a href="mailto:jobandplay.support@gmail.com">jobandplay.support@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>DysLexic — Terms and Conditions of Use<span class="sep">·</span>Version 2.0<span class="sep">·</span>In force from 1 September 2026</p>
+    <p>This document relates to the DysLexic application (com.kimboj.dyslexic) and to nothing else. See also the <a href="./privacy-policy.html">Privacy Policy</a>.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
